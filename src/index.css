@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply transition-colors duration-300 antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
+
+/* Custom Glassmorphism Styles */
+.glass-panel {
+  @apply bg-white/70 dark:bg-slate-900/60 backdrop-blur-md border border-white/20 dark:border-slate-800/50 shadow-lg;
+}
+
+.glass-card {
+  @apply bg-white/60 dark:bg-slate-900/50 backdrop-blur-md border border-white/30 dark:border-slate-800/40 shadow-md hover:shadow-xl transition-all duration-300;
+}
+
+.glass-input {
+  @apply bg-white/40 dark:bg-slate-950/40 backdrop-blur-sm border border-slate-200 dark:border-slate-800 focus:border-eco-green-500 focus:dark:border-eco-green-400 focus:outline-none focus:ring-2 focus:ring-eco-green-500/20 rounded-xl transition-all duration-300;
+}
+
+.glass-button {
+  @apply relative overflow-hidden backdrop-blur-sm transition-all duration-300 active:scale-95 disabled:opacity-50 disabled:pointer-events-none;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-slate-300 dark:bg-slate-800 rounded-full hover:bg-eco-green-500 hover:dark:bg-eco-green-600 transition-colors;
+}
+
+/* Background Gradients & Grids */
+.bg-grid-pattern {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(34, 197, 94, 0.04) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 197, 94, 0.04) 1px, transparent 1px);
+}
+
+.dark .bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(34, 197, 94, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(34, 197, 94, 0.02) 1px, transparent 1px);
+}
+
+/* Before/After Slider handle style */
+.slider-thumb {
+  pointer-events: none;
+}
