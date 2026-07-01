@@ -112,7 +112,7 @@ export const IdeaGenerator: React.FC<IdeaGeneratorProps> = ({
           <Compass className="w-8 h-8 animate-spin-slow" />
         </div>
         <h1 className="text-3xl md:text-4xl font-extrabold text-slate-900 dark:text-white">
-          AI Smart Reuse Generator
+          ReNova AI Generator
         </h1>
         <p className="text-sm text-slate-600 dark:text-slate-400">
           Enter any waste material lying around your house, and our custom eco-model will generate creative, step-by-step DIY project blueprints to reuse it.

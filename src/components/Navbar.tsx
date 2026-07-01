@@ -46,8 +46,8 @@ export const Navbar: React.FC<NavbarProps> = ({
               <Leaf className="w-5 h-5 animate-pulse-slow" />
             </div>
             <span className="text-lg font-black tracking-tight text-slate-850 dark:text-white flex items-center gap-1">
-              <span>Smart</span>
-              <span className="text-eco-green-655 dark:text-eco-green-400">Reuse</span>
+              <span>Re</span>
+              <span className="text-eco-green-655 dark:text-eco-green-400">Nova</span>
             </span>
           </div>
 

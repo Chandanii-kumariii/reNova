@@ -27,6 +27,8 @@ export interface CommunityPost {
   afterColor: string;
   beforeIcon: string;
   afterIcon: string;
+  beforeImage?: string;
+  afterImage?: string;
   likes: number;
   comments: { id: string; username: string; text: string; time: string }[];
   date: string;
@@ -245,6 +247,8 @@ export const MOCK_COMMUNITY_POSTS: CommunityPost[] = [
     afterColor: 'from-amber-100 to-amber-300',
     beforeIcon: 'Disc',
     afterIcon: 'Armchair',
+    beforeImage: 'https://images.unsplash.com/photo-1578844251758-2f71da64c96f?auto=format&fit=crop&w=600&q=80',
+    afterImage: 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80',
     likes: 148,
     comments: [
       { id: 'cc1', username: 'GreenThumbDan', text: 'This is absolutely stunning! How many feet of rope did you need?', time: '2 hours ago' },
@@ -267,6 +271,8 @@ export const MOCK_COMMUNITY_POSTS: CommunityPost[] = [
     afterColor: 'from-green-400 to-emerald-600',
     beforeIcon: 'GlassWater',
     afterIcon: 'Flower2',
+    beforeImage: 'https://images.unsplash.com/photo-1471193945509-9ad0617afabf?auto=format&fit=crop&w=600&q=80',
+    afterImage: 'https://images.unsplash.com/photo-1416879595882-3373a0480b5b?auto=format&fit=crop&w=600&q=80',
     likes: 92,
     comments: [
       { id: 'cc4', username: 'SustainableAlice', text: 'What a brilliant way to define garden paths. Does it hold up against lawnmowers?', time: '1 day ago' },
@@ -288,6 +294,8 @@ export const MOCK_COMMUNITY_POSTS: CommunityPost[] = [
     afterColor: 'from-amber-600 to-amber-800',
     beforeIcon: 'Box',
     afterIcon: 'Cat',
+    beforeImage: 'https://images.unsplash.com/photo-1595079676339-1534801ad6cf?auto=format&fit=crop&w=600&q=80',
+    afterImage: 'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?auto=format&fit=crop&w=600&q=80',
     likes: 205,
     comments: [
       { id: 'cc6', username: 'CatLover99', text: 'Whiskers looks like royalty in there! Definitely making this tonight.', time: '3 days ago' },

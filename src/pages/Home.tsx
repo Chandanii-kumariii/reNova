@@ -29,7 +29,7 @@ export const Home: React.FC<HomeProps> = ({ setActiveTab }) => {
         <div className="relative z-10 max-w-3xl space-y-6">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-eco-green-100 dark:bg-eco-green-950/40 text-eco-green-700 dark:text-eco-green-400 text-xs font-semibold border border-eco-green-200/50 dark:border-eco-green-800/30">
             <Leaf className="w-3.5 h-3.5 animate-pulse" />
-            <span>Smart Upcycling AI</span>
+            <span>ReNova Upcycling AI</span>
           </div>
           
           <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight text-slate-900 dark:text-white leading-tight">

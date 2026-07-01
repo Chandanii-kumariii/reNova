@@ -50,7 +50,7 @@ export const AboutContact: React.FC<AboutContactProps> = ({ showNotification }) 
           </h2>
 
           <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
-            Every day, millions of tons of recyclable and upcyclable household materials are discarded into local municipal dumpsters. The <strong>Smart Reuse Idea Generator</strong> was born out of a desire to break this linear lifecycle. By combining modern interactive technology with detailed DIY instructions, we empower individuals to view waste not as trash, but as a valuable raw material.
+            Every day, millions of tons of recyclable and upcyclable household materials are discarded into local municipal dumpsters. The <strong>ReNova</strong> platform was born out of a desire to break this linear lifecycle. By combining modern interactive technology with detailed DIY instructions, we empower individuals to view waste not as trash, but as a valuable raw material.
           </p>
 
           {/* Pillars grid */}
@@ -109,7 +109,7 @@ export const AboutContact: React.FC<AboutContactProps> = ({ showNotification }) 
                 <div className="p-2.5 bg-slate-50 dark:bg-slate-950/30 border border-slate-150/40 dark:border-slate-800/40 rounded-xl text-eco-green-600">
                   <Mail className="w-4 h-4" />
                 </div>
-                <span>contact@smartreuse.eco</span>
+                <span>contact@renova.eco</span>
               </div>
 
               <div className="flex items-center gap-3">

@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import type { CommunityPost } from '../data/mockProjects';
 import { BeforeAfterSlider } from '../components/BeforeAfterSlider';
-import { Heart, MessageSquare, Share2, Plus, X, Sparkles, Send } from 'lucide-react';
+import { Heart, MessageSquare, Share2, Plus, X, Sparkles, Send, UploadCloud } from 'lucide-react';
 
 interface CommunityProps {
   posts: CommunityPost[];
@@ -30,6 +30,8 @@ export const Community: React.FC<CommunityProps> = ({
   const [formMaterial, setFormMaterial] = useState('Plastic Bottle');
   const [formBeforeLabel, setFormBeforeLabel] = useState('');
   const [formAfterLabel, setFormAfterLabel] = useState('');
+  const [formBeforeImage, setFormBeforeImage] = useState('');
+  const [formAfterImage, setFormAfterImage] = useState('');
   
   // Custom design choices for user post
   const [formBeforeColor, setFormBeforeColor] = useState('from-gray-700 to-slate-900');
@@ -57,6 +59,8 @@ export const Community: React.FC<CommunityProps> = ({
       afterColor: formAfterColor,
       beforeIcon: formBeforeIcon,
       afterIcon: formAfterIcon,
+      beforeImage: formBeforeImage || undefined,
+      afterImage: formAfterImage || undefined,
     });
 
     // Reset Form
@@ -64,6 +68,8 @@ export const Community: React.FC<CommunityProps> = ({
     setFormDesc('');
     setFormBeforeLabel('');
     setFormAfterLabel('');
+    setFormBeforeImage('');
+    setFormAfterImage('');
     setShowAddModal(false);
     showNotification('Project published to the global feed!', 'success');
   };
@@ -148,6 +154,8 @@ export const Community: React.FC<CommunityProps> = ({
                 afterColor={post.afterColor}
                 beforeIcon={post.beforeIcon}
                 afterIcon={post.afterIcon}
+                beforeImage={post.beforeImage}
+                afterImage={post.afterImage}
               />
             </div>
 
@@ -315,6 +323,85 @@ export const Community: React.FC<CommunityProps> = ({
                   <option>Tin Can</option>
                   <option>Orange Peels</option>
                 </select>
+              </div>
+
+              {/* Before & After Image Upload */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5 pt-2">
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-slate-600 dark:text-slate-300">Before Image (Raw Waste)</label>
+                  <div className="relative border border-dashed border-slate-300 dark:border-slate-800 rounded-xl p-3.5 flex flex-col items-center justify-center bg-slate-50/40 dark:bg-slate-950/20 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors h-28">
+                    {formBeforeImage ? (
+                      <div className="relative w-full h-full rounded-lg overflow-hidden">
+                        <img src={formBeforeImage} className="w-full h-full object-cover" alt="Before Preview" />
+                        <button
+                          type="button"
+                          onClick={() => setFormBeforeImage('')}
+                          className="absolute top-1 right-1 p-1 bg-red-650 hover:bg-red-700 text-white rounded-full transition-transform active:scale-90"
+                        >
+                          <X className="w-3 h-3" />
+                        </button>
+                      </div>
+                    ) : (
+                      <>
+                        <UploadCloud className="w-6 h-6 text-slate-400 mb-1" />
+                        <span className="text-[10px] text-slate-500 font-semibold">Upload Image</span>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            if (file) {
+                              const reader = new FileReader();
+                              reader.onload = (event) => {
+                                setFormBeforeImage(event.target?.result as string);
+                              };
+                              reader.readAsDataURL(file);
+                            }
+                          }}
+                          className="absolute inset-0 opacity-0 cursor-pointer"
+                        />
+                      </>
+                    )}
+                  </div>
+                </div>
+
+                <div className="space-y-1">
+                  <label className="text-xs font-bold text-slate-600 dark:text-slate-300">After Image (Upcycled)</label>
+                  <div className="relative border border-dashed border-slate-300 dark:border-slate-800 rounded-xl p-3.5 flex flex-col items-center justify-center bg-slate-50/40 dark:bg-slate-950/20 hover:bg-slate-100 dark:hover:bg-slate-900 transition-colors h-28">
+                    {formAfterImage ? (
+                      <div className="relative w-full h-full rounded-lg overflow-hidden">
+                        <img src={formAfterImage} className="w-full h-full object-cover" alt="After Preview" />
+                        <button
+                          type="button"
+                          onClick={() => setFormAfterImage('')}
+                          className="absolute top-1 right-1 p-1 bg-red-650 hover:bg-red-700 text-white rounded-full transition-transform active:scale-90"
+                        >
+                          <X className="w-3 h-3" />
+                        </button>
+                      </div>
+                    ) : (
+                      <>
+                        <UploadCloud className="w-6 h-6 text-slate-400 mb-1" />
+                        <span className="text-[10px] text-slate-500 font-semibold">Upload Image</span>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={(e) => {
+                            const file = e.target.files?.[0];
+                            if (file) {
+                              const reader = new FileReader();
+                              reader.onload = (event) => {
+                                setFormAfterImage(event.target?.result as string);
+                              };
+                              reader.readAsDataURL(file);
+                            }
+                          }}
+                          className="absolute inset-0 opacity-0 cursor-pointer"
+                        />
+                      </>
+                    )}
+                  </div>
+                </div>
               </div>
 
               {/* Slider Config row */}

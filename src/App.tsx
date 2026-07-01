@@ -230,13 +230,13 @@ function App() {
             <div className="p-1.5 bg-eco-green-500 rounded-lg text-white">
               <Leaf className="w-4 h-4" />
             </div>
-            <span className="font-extrabold text-slate-850 dark:text-slate-250">Smart Reuse Idea Generator</span>
+            <span className="font-extrabold text-slate-850 dark:text-slate-250">ReNova</span>
           </div>
           <p className="max-w-md mx-auto leading-relaxed text-[11px]">
             Empowering global citizens to convert everyday domestic waste into premium, functional assets. Upcycle for a cleaner, greener tomorrow.
           </p>
           <div className="pt-2 text-[10px]">
-            © {new Date().getFullYear()} Smart Reuse Inc. Developed with eco-friendly intelligence.
+            © {new Date().getFullYear()} ReNova Inc. Developed with eco-friendly intelligence.
           </div>
         </div>
       </footer>
