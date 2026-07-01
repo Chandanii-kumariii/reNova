@@ -21,7 +21,7 @@ const MOCK_SCAN_EXAMPLES = [
     name: 'Plastic Water Bottle',
     material: 'Plastic Bottle',
     color: 'from-sky-200 to-sky-400 dark:from-sky-900/40 dark:to-sky-700/40',
-    icon: '🥛',
+    icon: '🥤',
     confidence: '99.4%',
     desc: 'Standard 500ml single-use PET beverage container.'
   },
@@ -30,7 +30,7 @@ const MOCK_SCAN_EXAMPLES = [
     name: 'Glass Jam Jar',
     material: 'Glass Jar',
     color: 'from-emerald-200 to-teal-400 dark:from-emerald-900/40 dark:to-teal-700/40',
-    icon: '🏺',
+    icon: '🫙',
     confidence: '98.7%',
     desc: 'Empty glass food vessel, highly durable silica construction.'
   },

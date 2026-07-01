@@ -77,7 +77,7 @@ export const Navbar: React.FC<NavbarProps> = ({
               className="p-2.5 rounded-xl border border-slate-200/60 dark:border-slate-800 bg-white/50 dark:bg-slate-950/40 text-slate-650 dark:text-slate-350 hover:bg-slate-50 dark:hover:bg-slate-900 transition-colors active:scale-95 shadow-sm"
             >
               {theme === 'light' ? (
-                <Moon className="w-4 h-4 text-eco-blue-600 animate-float-medium" />
+                <Moon className="w-4 h-4 text-eco-blue-600 animate-float-mini" />
               ) : (
                 <Sun className="w-4 h-4 text-amber-400 animate-spin-slow" />
               )}
